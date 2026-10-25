@@ -2,7 +2,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: cleanup
+  name: cleanup  # Cleanup task: removes all files from WORKSPACE_SOURCE_PATH
 spec:
   description: This task will clean up a workspace by deleting all of the files.
   workspaces:
@@ -38,9 +38,9 @@ spec:
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: nose
+  name: nose  # Test task: Run unit tests with nose
 spec:
-  description: This task will run nosetests on the provided input.
+  description: Run unit tests with nose (nosetests)
   workspaces:
     - name: source
   params:
