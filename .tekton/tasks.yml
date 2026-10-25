@@ -1,3 +1,9 @@
+# GitHub URL: https://github.com/Tesstekos/ci-cd-final-project/blob/main/.tekton/tasks.yml
+# Repository: https://github.com/Tesstekos/ci-cd-final-project
+# Task 1 - cleanup: step "remove" (alpine:3) deletes all files from WORKSPACE_SOURCE_PATH
+#   (rm -rf "${WORKSPACE_SOURCE_PATH:?}"/* and hidden files)
+# Task 2 - nose: step "nosetests" - Run unit tests with nose
+#   (pip install -r requirements.txt; nosetests $(params.args))
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task
